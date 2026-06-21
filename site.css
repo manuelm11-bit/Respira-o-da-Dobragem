@@ -1,0 +1,106 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Garante o fundo totalmente preto */
+    color: #FFFFFF;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #6d1010;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #164b11; /* Cor verde apenas para a barra do menu */
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    margin-top: 20px;
+}
+
+/* Contentor da Galeria (Alinhamento Vertical e Centrado) */
+.galeria {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos um por baixo do outro */
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: center;
+    gap: 20px;             
+    margin: 30px auto;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Ajuste do Vídeo / GIF na Página Inicial */
+.galeria video {
+    width: 100%;
+    max-width: 750px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(109, 16, 16, 0.5);
+}
+
+/* Ajuste das Imagens (Poster e Logotipo) nas páginas Sobre e Elenco */
+.imagem-apresentacao, .Logotipo, .logotipo {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(109, 16, 16, 0.5);
+}
+
+/* Bloco de Texto de Apresentação Centrado */
+.texto-apresentacao {
+    width: 100%;
+    max-width: 800px;
+    text-align: center; /* Centra todo o texto e parágrafos */
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.texto-apresentacao h3 {
+    color: #e53935; 
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.texto-apresentacao p {
+    margin: 10px 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #6d1010;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 65px;
+    width: 100%;
+}
