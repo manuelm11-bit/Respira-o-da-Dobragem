@@ -132,16 +132,29 @@
 </head>
 
 <body>
-    <header>
-        <h1>Respiração Da Dobragem</h1>
-        <p>Bem-vindos ao Nosso Website</p>
+    <header class="header-video">
+        <video autoplay loop muted playsinline class="video-bg">
+            <source src="Sun.mp4" type="video/mp4">
+        </video>
+        <div class="header-conteudo">
+            <h1>Respiração Da Dobragem</h1>
+            <p>Bem-vindos ao Nosso Website</p>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="pessoal.html">Pessoal/Elenco</a>
-        <a href="Firma.html">Firma</a>
+    <nav class="barra-verde">
+        <div class="contentor-central-nav">
+            <img src="Tangiro.gif" alt="Tanjiro" class="gif-nav">
+            <img src="Inosukegif.gif" alt="Inosuke" class="gif-nav">
+            
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="pessoal.html">Pessoal/Elenco</a>
+            <a href="Firma.html">Firma</a>
+            
+            <img src="Zenitsu.gif" alt="Zenitsu" class="gif-nav">
+            <img src="Kimetsu.gif" alt="Kimetsu" class="gif-nav">
+        </div>
     </nav>
 
     <main class="firma-container">
@@ -151,7 +164,6 @@
         </div>
         
         <div class="firma-grid">
-            <!-- Membro Novo: Manuel Miranda (Kisame1111) -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Eu.jpg" alt="Manuel Miranda (Kisame1111)">
@@ -170,7 +182,6 @@
                 </div>
             </div>
 
-            <!-- Membro 1: Ozzie -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Ozzie.png" alt="Ozzie">
@@ -189,7 +200,6 @@
                 </div>
             </div>
 
-            <!-- Membro 2: Tigas -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Tigas.jpg" alt="Tigas">
@@ -208,7 +218,6 @@
                 </div>
             </div>
 
-            <!-- Membro 3: Dobrador da Tuga -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="dobrador.jpg" alt="Dobrador da Tuga">
@@ -227,7 +236,6 @@
                 </div>
             </div>
 
-            <!-- Membro 4: Gabriel Matos -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Foice.png" alt="Gabriel Matos">
@@ -246,7 +254,6 @@
                 </div>
             </div>
 
-            <!-- Membro 5: Moon -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Moon.jpg" alt="Moon">
@@ -271,7 +278,6 @@
         <p>Respiração da Dobragem Studios</p>
     </footer>
 
-    <!-- Botão Flutuante do Discord Fixo e Limpo -->
     <a href="https://discord.gg/TKXhCtJS" class="btn-discord-fixo" target="_blank" rel="noopener noreferrer">
         <img src="discord.png" alt="Discord Logo" class="icon-discord">
         Entrar no Servidor
@@ -297,12 +303,10 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         transition: background-color 0.2s, transform 0.2s;
     }
-
     .btn-discord-fixo:hover {
         background-color: #4752C4;
         transform: scale(1.05);
     }
-
     .icon-discord {
         width: 24px;
         height: 24px;
