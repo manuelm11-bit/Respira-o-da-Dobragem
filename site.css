@@ -104,3 +104,51 @@ footer {
     margin-top: 65px;
     width: 100%;
 }
+
+/* === DESIGN MODERNO DO MENU DE NAVEGAÇÃO === */
+nav {
+    background-color: #0f0f0f !important; /* Fundo escuro profundo */
+    border-bottom: 2px solid #6d1010; /* Linha de detalhe vermelha abaixo do menu */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+nav a {
+    color: #b3b3b3 !important; /* Cor do texto padrão mais suave */
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease; /* Transição suave para todas as animações */
+    position: relative;
+}
+
+/* Efeito ao passar o rato (Hover) */
+nav a:hover {
+    color: #ffffff !important; /* Texto fica totalmente branco */
+    background-color: rgba(109, 16, 16, 0.2); /* Fundo levemente avermelhado */
+}
+
+/* Linha animada que surge por baixo do link ao passar o rato */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #e53935; /* Vermelho vivo */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 80%; /* A linha expande-se a partir do centro */
+}
