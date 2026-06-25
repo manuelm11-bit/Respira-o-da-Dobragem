@@ -128,6 +128,76 @@
             width: auto;
             display: block;
         }
+
+        /* --- CORREÇÕES DO FOOTER E COMPONENTES FIXOS --- */
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #0a0a0a;
+            border-top: 2px solid #6d1010;
+            position: relative;
+            gap: 20px;
+        }
+
+        footer p {
+            color: #888888;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Estilização controlada do Botão do Discord no rodapé */
+        .btn-discord-fixo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #5865F2;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+        }
+
+        .btn-discord-fixo:hover {
+            background-color: #4752C4;
+            transform: translateY(-2px);
+        }
+
+        /* Limitação crucial do tamanho do ícone do Discord */
+        .icon-discord {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Estilização controlada do Botão de Voltar ao Topo (Katana) */
+        .btn-topo-katana {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-topo-katana:hover {
+            transform: translateY(-5px) rotate(-5deg);
+        }
+
+        /* Limitação crucial do tamanho da imagem da Katana */
+        .btn-topo-katana img {
+            width: auto;
+            height: 60px; /* Mantém a lâmina proporcional e elegante */
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.7));
+        }
     </style>
 </head>
 
@@ -164,7 +234,6 @@
         </div>
         
         <div class="firma-grid">
-            <!-- Manuel Miranda -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Eu.jpg" alt="Manuel Miranda (Kisame1111)">
@@ -183,7 +252,6 @@
                 </div>
             </div>
 
-            <!-- Ozzie -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Ozzie.png" alt="Ozzie">
@@ -202,7 +270,6 @@
                 </div>
             </div>
 
-            <!-- Tigas -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Tigas.jpg" alt="Tigas">
@@ -221,7 +288,6 @@
                 </div>
             </div>
 
-            <!-- Dobrador da Tuga -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="dobrador.jpg" alt="Dobrador da Tuga">
@@ -240,7 +306,6 @@
                 </div>
             </div>
 
-            <!-- Gabriel Matos -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Foice.png" alt="Gabriel Matos">
@@ -259,7 +324,6 @@
                 </div>
             </div>
 
-            <!-- Moon -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Moon.jpg" alt="Moon">
@@ -278,7 +342,6 @@
                 </div>
             </div>
 
-            <!-- Membro: Inês -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Ines.jpg" alt="Inês">
@@ -297,7 +360,6 @@
                 </div>
             </div>
 
-            <!-- Membro: Kiku -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Kiku.jpg" alt="Kiku">
@@ -313,7 +375,6 @@
                 </div>
             </div>
 
-            <!-- Membro: Compal (Tropa do Exa) -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="compal_exa.png" alt="Compal">
@@ -332,7 +393,6 @@
                 </div>
             </div>
 
-            <!-- Membro: AsFofinhas (Tropa do Exa) -->
             <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="asfofinhas.png" alt="AsFofinhas">
@@ -350,8 +410,8 @@
                     </div>
                 </div>
             </div>
-           <!-- Membro: Vipanda -->
-            <div class="member-card">
+
+           <div class="member-card">
                 <div class="member-image-wrap">
                     <img src="Vipanda.jpg" alt="Pedro Andrade (Vipanda)">
                 </div>
@@ -378,18 +438,13 @@
            class="btn-discord-fixo"
            target="_blank"
            rel="noopener noreferrer">
-
-            <img src="discord.png"
-                 alt="Discord Logo"
-                 class="icon-discord">
-
+            <img src="discord.png" alt="Discord Logo" class="icon-discord">
             Entrar no Servidor
         </a>
 
         <a href="#" class="btn-topo-katana">
             <img src="katana.png" alt="Voltar ao Topo">
         </a>
-
     </footer>
 
 </body>
