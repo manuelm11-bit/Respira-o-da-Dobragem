@@ -216,3 +216,139 @@ nav.barra-verde a:last-of-type {
     font-size: 1.05rem;
     color: #dddddd;
 }
+
+/* ==========================================
+   5. BOTÕES FIXOS (DISCORD À ESQUERDA E KATANA À DIREITA)
+   ========================================== */
+html {
+    scroll-behavior: smooth; /* Subida suave ao topo */
+}
+
+/* --- BOTÃO DO DISCORD (ORIGINAL À ESQUERDA) --- */
+.btn-discord-fixo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #5865F2; /* Cor oficial do Discord */
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-discord-fixo:hover {
+    background-color: #4752C4;
+    transform: scale(1.05);
+}
+
+.icon-discord {
+    width: 24px;
+    height: auto;
+}
+
+/* --- BOTÃO KATANA COM LEGENDA (MAIOR, FLUTUANTE À DIREITA) --- */
+.btn-topo-katana {
+    position: fixed;
+    bottom: 15px;
+    right: 25px; /* Alinhado à direita */
+    z-index: 9999;
+    width: 100px; /* Ficou ainda maior para destacar com a legenda */
+    display: flex;
+    flex-direction: column; /* Coloca a imagem em cima e o texto em baixo */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove sublinhados do texto */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.btn-topo-katana img {
+    width: 100%; /* Ocupa a largura total do contentor */
+    height: auto;
+    object-fit: contain;
+    /* Sombra preta para destacar a katana no fundo escuro do site */
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0px 0px 10px rgba(229, 57, 53, 0.4));
+    transition: transform 0.3s ease;
+}
+
+/* Estilo da mini legenda em texto branco */
+.btn-topo-katana span {
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 11px; /* Tamanho mini e discreto */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px; /* Espaço entre a lâmina e o texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Garante que se lê bem em cima de qualquer fundo */
+    text-align: center;
+}
+
+/* Efeito ao passar o rato no PC (Aumenta o bloco e roda ligeiramente a katana) */
+.btn-topo-katana:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.9)) drop-shadow(0px 0px 15px rgba(229, 57, 53, 0.8));
+}
+
+.btn-topo-katana:hover img {
+    transform: rotate(10deg); /* Faz apenas a katana rodar um pouco no hover */
+}
+
+/* ==========================================
+   6. RESPONSIVIDADE PARA TELEMÓVEL
+   ========================================== */
+@media (max-width: 768px) {
+    .header-video {
+        height: 140px;
+    }
+    .header-conteudo h1 {
+        font-size: 1.8rem;
+    }
+    .header-conteudo p {
+        font-size: 0.9rem;
+    }
+
+    .contentor-central-nav {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 0;
+    }
+
+    .gif-nav {
+        height: 60px;
+        margin: 5px 0;
+    }
+    
+    .gif-nav:nth-of-type(2), nav.barra-verde a:last-of-type {
+        margin-right: 0px;
+    }
+
+    /* Ajustes dos botões no ecrã do Telemóvel */
+    .btn-discord-fixo {
+        padding: 10px 16px;
+        font-size: 14px;
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .btn-topo-katana {
+        width: 75px; /* Ajuste proporcional para ecrãs táteis mais pequenos */
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .btn-topo-katana span {
+        font-size: 9px; /* Encolhe um pouco o texto no telemóvel */
+    }
+}
